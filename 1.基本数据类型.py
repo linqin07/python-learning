@@ -39,5 +39,16 @@ print(tinylist)
 print(list[0])
 print(list[1:3])
 print(list + tinylist)
-new_var = list * 2
-print(new_var)
+print(list * 2)
+list[1] = 456;
+# 修改数组
+print(list)
+
+#元组,不可以改变属性，但是可以放数组对象进来改实参值
+print("--------------------------------------\n")
+tulpn = (1, 3, 2.2, '元组')
+print(tulpn)
+print(tulpn[0])
+print(tulpn[1:-1])
+
+
