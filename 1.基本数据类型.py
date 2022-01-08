@@ -45,10 +45,53 @@ list[1] = 456;
 print(list)
 
 #元组,不可以改变属性，但是可以放数组对象进来改实参值
-print("--------------------------------------\n")
+print("\n--------------------------------------")
 tulpn = (1, 3, 2.2, '元组')
 print(tulpn)
 print(tulpn[0])
 print(tulpn[1:-1])
+
+
+#set 自动去重
+site={'google', 'taobao', 'runoob', 'zhihu', 'baidu', 'baidu'}
+print("\n--------------------------------------")
+print(site)
+if 'taobao' in site:
+    print('taobao in site')
+else:
+    print('taobao not in site')
+
+a=set('abcdefff')
+b=set('bcde')
+
+print('差集,a-b剩下的:', a - b)
+print('交集,同时存在:', a & b)
+print('并集:', a | b)
+print('对称差集，两边都不同时存在:', a ^ b)
+
+#字典（hashmap）
+dict = {}
+dict['key'] = 'value'
+
+tinydict = {'key':'value', 'code':1, 'site':'www.baidu.com'}
+print(dict['key'])
+print(tinydict)
+print(tinydict['site'])
+print(tinydict.keys())
+print(tinydict.values())
+
+
+# 运算符号，+-*/ % += -=
+"""
+运算符号基本和java一样，除法 / 默认是算到小数
+此外还支持 2 ** 3 = 8 平方运算，3 // 2 = 1 除法向下取整
+"""
+if 2==2:
+    print('判断')
+
+
+"""
+左移运算符，num << 1   相当于num乘以2
+"""
 
 
