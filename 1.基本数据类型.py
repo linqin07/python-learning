@@ -120,5 +120,55 @@ print('左移<<:', a << 1)
 print('右移>>:', b >> 1)
 
 
+new_var = {1,2}
+tuple1 = ('1')
+list1=[1,2]
+if 1 in new_var:
+    print(1)
+if 1 in list1:
+    print('list', 1)
+if '1' in tuple1:
+    print('tuple1', 1)
+
+aa =1
+bb =1
+
+if aa is bb:
+    print('is 比较对象引用')
+if aa == bb:
+    print('== 比较值')
+
+print(list1[:])
+
+# 格式化
+print('我叫 %s 今年 %d 岁' % ('小米', 12))
+# f_string
+name = 'cainiao'
+print(f'hello {name}')
+w={'name':'cainiao', 'url':'www.cainiao.com'}
+print(f'{w["name"]}:{w["url"]}')
+
+x = 1
+print(f'{x+1=}')
+
+str = "菜鸟教程";
+str_utf8 = str.encode("UTF-8")
+str_gbk = str.encode("GBK")
+ 
+print(str)
+ 
+print("UTF-8 编码：", str_utf8)
+print("GBK 编码：", str_gbk)
+print("UTF-8 解码：", str_utf8.decode('UTF-8','strict'))
+print("GBK 解码：", str_gbk.decode('GBK','strict'))
+
+print('count:', str.count('菜鸟', 0 , 3))
+print('endwith', str.endswith('教程'))
+
+low = 'str'
+print('首字母大写',low.capitalize())
+print(low.find('t', 0, 3))
+print(low.index('t'))
+
 
 
