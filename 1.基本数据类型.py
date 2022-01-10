@@ -31,7 +31,7 @@ del var1
 # 多个同时赋值
 a, b = 1, 2
 
-print('-----------------------------')  # 数组
+print('-----------------------------')  # 数组，左闭右开
 list = ['abc', 123, 'runoob', 10.2]
 tinylist = ['a123', 456]
 print(list)
@@ -169,6 +169,10 @@ low = 'str'
 print('首字母大写',low.capitalize())
 print(low.find('t', 0, 3))
 print(low.index('t'))
+print(low.lower())
+print(low.upper())
+print('最少一个字符或者数字的类型', low.isalpha())
+
 
 
 
