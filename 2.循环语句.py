@@ -47,7 +47,7 @@ for i in list:
     # break
     # continue
 
-print("-----------iter--------------------")
+print("-----------iter 迭代器--------------------")
 import sys
 list = [1, 2, 3, 4, 5]
 it = iter(list)
@@ -76,6 +76,7 @@ class MyNumbers:
         return x
 
 myclass = MyNumbers()
+
 
 
 
