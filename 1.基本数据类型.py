@@ -187,4 +187,13 @@ L.remove('1')
 print(L)
 L.reverse()
 print(L)
-L.sort(reverse=True)  #不可以混着类型排序
+# L.sort(reverse=True)  #不可以混着类型排序
+
+print('0' in L)
+
+# 推导式
+x = {x for x in 'abcabcdr' if x not in 'abc'}
+print(x)
+
+# map_var = dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+# print(map_var)
