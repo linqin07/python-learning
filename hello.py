@@ -35,9 +35,14 @@ import sys; x = "菜鸟"; sys.stdout.write(x+'\n')
 print(1111, end='')
 print(2222)
 
+# improt --------
+import com.fib as fib
+fib.fib(14)
+
+print('dir():', dir())
     
 
-    
+
 
 
 
