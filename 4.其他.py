@@ -3,7 +3,7 @@ list = [1, 2, 3, 4, 5, 6]
 a = [x*2 for x in list ]
 print(a)
 
-https://www.runoob.com/python3/python3-inputoutput.html
+# https://www.runoob.com/python3/python3-inputoutput.html
 # 元组
 tulpe1 = 1,2,3
 print(type(tulpe1))
@@ -36,3 +36,29 @@ print(dict1)
 
 
 # https://www.runoob.com/python3/python3-data-structure.html
+
+# str = input("请输入:")
+# print("你输入了", str)
+
+"""
+文件读写
+r 只读
+b 以二进制方式读
+a+ 追加写
+r+ 重头覆盖写
+w 重头覆盖写
+"""
+f = open('D:\\test.txt', "r")
+# f.write("\nPython 是一种号的语言+++11")
+# open = f.readline()
+# print(open)
+
+for a in f: print(a, end='')
+f.close()
+
+
+print("\n---------------------")
+#预定义的清理行为,不用手动关闭
+with open('D:\\test.txt', "r") as test:
+    for line in test:
+        print(line, end='')
