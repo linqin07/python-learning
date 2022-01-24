@@ -1,0 +1,18 @@
+创建
+conda create -n python38 python=3.8
+激活
+activate python38
+安装
+conda install fabric3
+关闭
+deactivate
+删除
+conda remove -n your_env_name --all
+conda remove --name your_env_name  package_name 
+
+list包
+conda list [xx]
+删除包
+conda remove pacage_name
+
+配置镜像.condarc
