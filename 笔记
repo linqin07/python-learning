@@ -15,4 +15,10 @@ conda list [xx]
 删除包
 conda remove pacage_name
 
+环境管理
+conda env list
+
 配置镜像.condarc
+
+格式化无效手动执行命令
+yapf -i filename.py 
