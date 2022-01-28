@@ -1,40 +1,49 @@
-import fabric.api as api
+from fabric.api import *
 import time
 import os
 import sys
 
 # 设置目标主机
-api.env.hosts = ['192.168.233.128']
+env.hosts = ['192.168.233.128']
 # 设置多台主机用户名及密码
-api.env.passwords = {'root@192.168.233.128:22': '123456'}
-api.env.user = "root"
+env.passwords = {'root@192.168.233.128:22': '123456'}
+env.user = "root"
 
-path = {"D:\IDEAWorkspace\gitbook"}
-uploadPath = {"/data/uploadPath"}
+path = "F:\\youcai\\"
+uploadPath ="/data/uploadPath/"
 
 
 def start():
-    api.run('mkdir test')
+    run('mkdir test')
 
 
 # 设置一个任务
 
 def upload():
     print("检查本地环境")
-    api.local("java -version")
+    local("java -version")
     print("java 环境正常")
-    api.local("mvn -v")
+    local("mvn -v")
     print("maven 环境正常")
 
 
+def tar():
+    print("打包tar 路径 path:", path)
+    with lcd(path):
+        local('tar cf  package.tar .')
 
+def upload():
+    run("mkdir -p " + uploadPath)
+    print("开始上传包, 上传路径为 ", uploadPath)
+    put(path + "package.tar", uploadPath + "package.tar")
 
-def package(path='D:\IDEAWorkspace\gitbook'):
-    print("path=", path)
-    
+# 解包并执行
+def task_exc():
+    with cd(uploadPath):
+        run('tar xf package.tar')
 
-#     临时性
-    with api.lcd('D:'):
-      with api.lcd(r"cd D:\IDEAWorkspace\gitbook"):   
-       api.local("dir")
-       api.local("mvn clean package -Dmaven.test.skip=true")
+@task
+def start():
+    tar()
+    upload()
+    task_exc()
