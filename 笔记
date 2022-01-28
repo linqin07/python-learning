@@ -22,3 +22,7 @@ conda env list
 
 格式化无效手动执行命令
 yapf -i filename.py 
+conda config --set auto_activate_base false # 设置非自动启动
+
+配置镜像.condarc
+vscode 配置直接把路径defaultInterpreterPath 设置为安装路径里面的python.exe即可。
