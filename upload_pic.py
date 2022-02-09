@@ -1,3 +1,4 @@
+#coding=UTF-8
 """
 用于上传图片到gitee中，使用gitee作为图床
 """
@@ -33,7 +34,7 @@ for address in sys.argv[1:]:
         f.close()
     
     parms = {"access_token": access_token, "content": base64_str, "message": "this is a pic!"}
-    formatUrl = url.format("linqin07", "pic", fileName)
+    formatUrl = url.format("linqin07", "pic-bed", fileName)
     response = requests.post(formatUrl, parms)
     # print(response.text)
 
