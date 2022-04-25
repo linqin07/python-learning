@@ -16,9 +16,12 @@ conda list [xx]
 conda remove pacage_name
 
 环境管理
-conda env list
+
 
 配置镜像.condarc
+
+然后我又添加了个pip清华的镜像源，执行下面这个命令：
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 格式化无效手动执行命令
 yapf -i filename.py 
