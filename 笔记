@@ -29,3 +29,6 @@ conda config --set auto_activate_base false # 设置非自动启动
 
 配置镜像.condarc
 vscode 配置直接把路径defaultInterpreterPath 设置为安装路径里面的python.exe即可。
+
+
+指定pip版本python -m pip install pip==22.0.4

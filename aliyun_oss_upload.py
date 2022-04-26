@@ -12,4 +12,4 @@ bucket = oss2.Bucket(auth, 'https://blog-07.oss-cn-guangzhou.aliyuncs.com', 'blo
 
     # 填写Object完整路径和本地文件的完整路径。Object完整路径中不能包含Bucket名称。
 # 如果未指定本地路径，则默认从示例程序所属项目对应本地路径中上传文件。
-bucket.put_object_from_file('exampleobject.txt', 'C:\\Users\\LinQin\\Desktop\\qq.png')            
+bucket.put_object_from_file('exampleobject.txt', 'C:\\Users\\LinQin\\Desktop\\1.png')            ![](https://blog-07.oss-cn-guangzhou.aliyuncs.com/2.png)
