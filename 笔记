@@ -32,3 +32,5 @@ vscode 配置直接把路径defaultInterpreterPath 设置为安装路径里面�
 
 
 指定pip版本python -m pip install pip==22.0.4
+
+设置默认的coda版本，首先先创建好对应的版本环境env，然后吧这个env的环境目录设置为环境变量放在coda所有环境变量之前就可以了。
